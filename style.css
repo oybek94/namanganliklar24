@@ -19,6 +19,7 @@ a {
 
 img {
    max-width: 100%;
+   height: auto;
 }
 
 .header-top {
@@ -129,7 +130,7 @@ img {
    margin-right: 36px;
    color: var(--nav-black);
    font-weight: 500;
-   font-size: 1rem;
+   font-size: 15px;
    line-height: 23px;
 }
 
@@ -487,3 +488,115 @@ img {
    margin: 0 20px;
 }
 
+/* ******************* FOOTER ***************** */
+
+.footer {
+   background-color: var(--blue);
+   color: var(--white);
+}
+
+.footer-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.footer-logo__text {
+   background: #133C82;
+   border-radius: 5px;
+   padding: 11px 12px 6px 9px;
+}
+
+.social {
+   display: flex;
+   align-items: center;
+}
+
+.social__text {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+}
+
+.social__btn {
+   position: relative;
+   color: var(--blue);
+   padding: 10px 9px 11px 33px;
+   background-color: var(--white);
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+   border-radius: 5px;
+   margin-left: 10px;
+}
+
+.social__btn::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/telegram.png");
+   background-repeat: no-repeat;
+   width: 18px;
+   height: 20px;
+   left: 10px;
+}
+
+.footer-line {
+   border: none;
+   border-top: 3px solid #133c82;
+   padding-bottom: 12px;
+}
+
+.footer-items {
+   display: flex;
+}
+
+.about {
+   max-width: 365px;
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 17px;
+   margin-right: 115px;
+}
+
+.about__title {
+   margin-top: 0;
+   margin-bottom: 0;
+   font-size: 16px;
+}
+
+.footer-nav {
+   margin-right: 115px;
+}
+
+.footer-nav__items {
+   list-style: none;
+   padding-left: 0;
+}
+
+.footer-nav__link {
+   color: var(--white);
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+
+
+.top-nav__links:hover, 
+.main-news__title:hover, 
+.report__title:hover, 
+.famous-news__title:hover {
+   color: var(--blue);
+}
+
+@media screen and (min-width: 1440px) {
+   .top-nav__links {
+      font-size: 17px;
+   }
+}
+
+@media screen and (min-width: 1650px) {
+   .top-nav__links {
+      font-size: 22px;
+   }
+}
