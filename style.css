@@ -331,6 +331,7 @@ img {
 
 .last-news {
    grid-area: lastNews;
+   margin-bottom: 38px;
 }
 
 .famous-news {
@@ -434,3 +435,55 @@ img {
    margin-top: 14px;
    margin-bottom: 18px;
 }
+
+
+/* ******************* FOOTER AD **************** */
+.footer-ad {
+   margin-bottom: 38px;
+}
+
+.footer-ad__row {
+   display: flex;
+   align-items: center;
+   background-color: var(--gray);
+}
+
+.footer-ad__image {
+   padding-top: 37px;
+   padding-left: 19px;
+   width: 19.66%;
+}
+
+.footer-ad__text {
+   width: 43.83%;
+}
+
+.footer-ad__title {
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 28px;
+   color: var(--blue);
+   margin-top: 40px;
+   margin-bottom: 10px;
+   max-width: 526px;
+}
+
+.footer-ad__info {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 21px;
+   color: #333333;
+   max-width: 526px;
+}
+
+
+.apps {
+   display: flex;
+   justify-content: flex-end;
+   width: 36.5%;
+}
+
+.appstore {
+   margin: 0 20px;
+}
+
