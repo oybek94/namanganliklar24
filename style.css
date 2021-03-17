@@ -17,9 +17,14 @@ a {
    text-decoration: none;
 }
 
+img {
+   max-width: 100%;
+}
+
 .header-top {
    width: 100%;
    background-color: var(--gray);
+   margin-bottom: 22px;
 }
 
 .container {
@@ -109,7 +114,7 @@ a {
 
 .top-nav {
    background-color: #fff;
-   margin-bottom: 8px;
+   margin-bottom: 18px;
 }
 
 .top-nav__items {
@@ -123,4 +128,125 @@ a {
 .top-nav__links {
    margin-right: 36px;
    color: var(--nav-black);
+   font-weight: 500;
+   font-size: 1rem;
+   line-height: 23px;
 }
+
+
+/* *************** HEADER TOP BANNER ************* */
+
+.top-ad {
+   padding-bottom: 23px;
+}
+
+/* *************** COVID INFO ************* */
+
+.covid {
+   margin-bottom: 18px;
+}
+
+.covid__row {
+   background-color: var(--gray);
+   display: flex;
+   align-items: center;
+   padding: 15px;
+}
+
+.covid__items {
+   position: relative;
+   display: flex;
+   justify-content: center;
+}
+
+.covid__numbers {
+   color: var(--black);
+   font-size: 24px;
+   font-weight: 500;
+}
+
+.covid__title {
+   margin-left: 90px;
+   padding-right: 71px;
+   border-right: 2px solid #EB5569;
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 24px;
+   position: relative;
+}
+
+.covid__title::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/virus.png");
+   background-repeat: no-repeat;
+   width: 43px;
+   height: 45px;
+   left: -65px;
+}
+
+.covid__patients {
+   margin-left: 70px;
+   padding-right: 50px;
+   border-right: 2px solid #F4CCD1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   position: relative;
+   color: #EB5569;
+}
+
+.covid__patients::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/mask.png");
+   background-repeat: no-repeat;
+   width: 40px;
+   height: 40px;
+   left: -50px;
+   top: 6px;
+}
+
+.covid__recovereds {
+   margin-left: 70px;
+   padding-right: 71px;
+   border-right: 2px solid #F4CCD1;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   position: relative;
+   color: #05B135;
+}
+
+.covid__recovereds::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/green.png");
+   background-repeat: no-repeat;
+   width: 40px;
+   height: 40px;
+   left: -50px;
+   top: 6px;
+}
+
+.covid__died {
+   margin-left: 70px;
+   padding-right: 71px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   position: relative;
+   color: var(--black);
+}
+
+.covid__died::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/ban.png");
+   background-repeat: no-repeat;
+   width: 40px;
+   height: 40px;
+   left: -50px;
+   top: 6px;
+}
+
