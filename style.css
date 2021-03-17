@@ -318,3 +318,119 @@ img {
    padding-left: 15px;
    border-radius: 5px;
 }
+
+/* ****************** NEWS ****************** */
+
+.news {
+   display: grid;
+   grid-template-areas:
+    'lastNews lastNews famousNews'
+    'lastNews lastNews middleAd';
+    gap: 20px;
+}
+
+.last-news {
+   grid-area: lastNews;
+}
+
+.famous-news {
+   grid-area: famousNews;
+   min-height: 542px;
+   max-width: 386px;
+   background-color: var(--gray);
+   border-radius: 5px;
+   margin-top: 20px;
+}
+
+.middle-ad {
+   grid-area: middleAd;
+}
+
+.last-news__text {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   color: var(--black);
+}
+
+.last-news__items {
+   display: flex;
+   margin-bottom: 18px;
+}
+
+.report {
+   margin-left: 20px;
+}
+
+.report__title {
+   margin-top: 0;
+   margin-bottom: 8px;
+   color: var(--title-color);
+   font-weight: 500;
+   font-size: 17px;
+   line-height: 20px;
+}
+
+.report__info {
+   font-weight: normal;
+   font-size: 15px;
+   line-height: 18px;
+   color: var(--short-info-color);
+   margin-top: 0;
+   margin-bottom: 12px;
+}
+
+.report__date {
+   position: relative;
+   padding-left: 20px;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 17px;
+   color: var(--date-color);
+}
+
+.report__date::before {
+   content: "";
+   position: absolute;
+   background-image: url("/images/ic_outline-date-range.svg");
+   background-repeat: no-repeat;
+   width: 18px;
+   height: 20px;
+   left: 0;
+}
+
+.show-more {
+   display: inline-block;
+   padding: 10px 32px;
+   border-radius: 5px;
+   background-color: var(--blue);
+   color: var(--white);
+}
+
+.famous-news__container {
+   padding: 16px 20px;
+}
+
+.famous-news__text {
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 24px;
+   color: var(--title-color);
+   margin-bottom: 6px;
+}
+
+.famous-news__title {
+   font-weight: normal;
+   font-size: 17px;
+   line-height: 20px;
+   color: var(--title-color);
+   margin-top: 0;
+   margin-bottom: 11px;
+}
+
+.famous-news__line {
+   border:none;
+   border-bottom: 4px solid #E4E4E4;
+   margin-top: 14px;
+   margin-bottom: 18px;
+}
