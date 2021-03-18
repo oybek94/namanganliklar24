@@ -403,7 +403,9 @@ img {
 }
 
 .show-more {
-   display: inline-block;
+   display: flex;
+   width: 135px;
+   margin: 0 auto;
    padding: 10px 32px;
    border-radius: 5px;
    background-color: var(--blue);
