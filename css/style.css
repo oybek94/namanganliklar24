@@ -9,43 +9,57 @@
    --white: #ffffff;
 }
 
-body {
+html {
+   box-sizing: border-box;
+ }
+ 
+ *,
+ *::after,
+ *::before {
+   box-sizing: inherit;
+ }
+ 
+ body {
+   margin: 0;
+   padding: 0;
    font-family: 'Rubik', sans-serif;
-}
-
-a {
-   text-decoration: none;
-}
+   font-weight: 400;
+   font-size: 16px;
+ }
 
 img {
    max-width: 100%;
    height: auto;
 }
 
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 25px;
+}
+
+/* *************** HEADER TOP INFO ************* */
 .header-top {
-   width: 100%;
+   padding-top: 44px;
+   padding-bottom: 23px;
    background-color: var(--gray);
    margin-bottom: 22px;
 }
 
-.container {
-   max-width: 1200px;
-   margin: 0 auto;
-   padding: 0 120px;
-}
-
-/* *************** HEADER TOP INFO ************* */
 .header-top__info {
    display: flex;
    align-items: center;
-   padding: 44px 0 40px;
+   margin: 0 0 40px;
 }
 
+/* LOGO */
+
 .top-logo {
+   margin-right: 17px;
+   padding: 7px 10px;
    border-radius: 5px;
    background-color: var(--white);
    box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
-   padding: 7px 10px;
 }
 
 .top-logo__text {
@@ -55,15 +69,18 @@ img {
    line-height: 33px;
    color: var(--blue);
    text-transform: uppercase;
+   text-decoration: none;
 }
 
+/* CURRENT */
 .rate__items {
    display: flex;
    list-style: none;
+   padding-left: 0;
 }
 
 .rate__list {
-   padding-right: 20px;
+   margin-right: 20px;
    font-size: 16px;
    color: var(--short-info-color);
 }
@@ -75,31 +92,76 @@ img {
    padding-right: 5px;
    color: var(--blue);
 }
+/* TOP RIGHT */
 
 .top__right {
    margin-left: auto;
    display: flex;
 }
 
+.search, 
+.lang {
+   margin-right: 22px;
+}
 .btn {
-   display: flex;
-   align-items: center;
-   padding: 11px;
    background-color: var(--white);
    border-radius: 5px;
    border: none;
-   margin-left: 20px;
    cursor: pointer;
 }
 
-.lang-btn {
-   margin-right: 5px;
-   border-radius: 50%;
+.search {
+   position: relative;
+   width: 40px;
+   height: 40px;
 }
 
+.search::before {
+   content: "";
+   position: absolute;
+   background: url("/images/search.svg") no-repeat;
+   width: 18px;
+   height: 18px;
+   top: 11px;
+   left: 11px;
+}
+
+.lang {
+   position: relative;
+   text-align: center;
+   padding-left: 36px;
+   width: 65px;
+   height: 40px;
+}
+
+.lang::before {
+   content: "";
+   position: absolute;
+   background: url("/images/flag.svg") no-repeat;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   left: 11px;
+}
+
+
 .join {
+   position: relative;
+   margin: auto;
+   padding: 11px 11px 11px 37px;
    background: linear-gradient(90deg, #1E96C8 15.07%, #37AEE2 85.96%);
    color:var(--white);
+   text-decoration: none;
+}
+
+.join::before {
+   content: "";
+   position: absolute;
+   background: url("/images/telegram.svg") no-repeat;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   left: 11px;
 }
 
 .join:hover {
@@ -117,14 +179,14 @@ img {
    background-color: #fff;
    margin-bottom: 18px;
    box-shadow: 0px 2px 5px rgba(159, 159, 159, 0.19);
+   padding: 22px 25px;
 }
 
 .top-nav__items {
-   list-style: none;
    display: flex;
-   justify-content: space-between;
-   padding: 22px 25px;
    margin: 0;
+   padding-left: 0;
+   list-style: none;
 }
 
 .top-nav__links {
@@ -133,13 +195,7 @@ img {
    font-weight: 500;
    font-size: 16px;
    line-height: 23px;
-}
-
-
-/* *************** HEADER TOP BANNER ************* */
-
-.top-ad {
-   padding-bottom: 23px;
+   text-decoration: none;
 }
 
 /* *************** COVID INFO ************* */
