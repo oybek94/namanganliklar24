@@ -205,15 +205,15 @@ img {
 }
 
 .covid__row {
-   background-color: var(--gray);
    display: flex;
    align-items: center;
    padding: 15px;
+   border-radius: 5px;
+   background-color: var(--gray);
 }
 
 .covid__items {
    position: relative;
-   display: flex;
    justify-content: center;
 }
 
@@ -224,13 +224,13 @@ img {
 }
 
 .covid__title {
+   position: relative;
    margin-left: 90px;
    padding-right: 40px;
    border-right: 2px solid #EB5569;
    font-size: 20px;
    font-weight: 500;
    line-height: 24px;
-   position: relative;
 }
 
 .covid__title::before {
@@ -243,69 +243,54 @@ img {
    left: -65px;
 }
 
-.covid__patients {
+.covid__patients,
+.covid__recovereds,
+.covid__died {
+   position: relative;
    margin-left: 70px;
-   padding-right: 50px;
+   padding-right: 71px;
    border-right: 2px solid #F4CCD1;
    font-size: 16px;
    font-weight: 400;
    line-height: 24px;
-   position: relative;
+}
+
+.covid__patients::before,
+.covid__recovereds::before,
+.covid__died::before {
+   content: "";
+   position: absolute;
+   background-repeat: no-repeat;
+   width: 40px;
+   height: 40px;
+   left: -50px;
+   top: 6px;
+}
+
+.covid__patients {
+   padding-right: 50px; 
    color: #EB5569;
 }
 
 .covid__patients::before {
-   content: "";
-   position: absolute;
    background-image: url("/images/mask.png");
-   background-repeat: no-repeat;
-   width: 40px;
-   height: 40px;
-   left: -50px;
-   top: 6px;
 }
 
 .covid__recovereds {
-   margin-left: 70px;
-   padding-right: 71px;
-   border-right: 2px solid #F4CCD1;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   position: relative;
    color: #05B135;
 }
 
 .covid__recovereds::before {
-   content: "";
-   position: absolute;
    background-image: url("/images/green.png");
-   background-repeat: no-repeat;
-   width: 40px;
-   height: 40px;
-   left: -50px;
-   top: 6px;
 }
 
 .covid__died {
-   margin-left: 70px;
-   padding-right: 71px;
-   font-size: 16px;
-   font-weight: 400;
-   line-height: 24px;
-   position: relative;
    color: var(--black);
+   border-right: none;
 }
 
 .covid__died::before {
-   content: "";
-   position: absolute;
    background-image: url("/images/ban.png");
-   background-repeat: no-repeat;
-   width: 40px;
-   height: 40px;
-   left: -50px;
-   top: 6px;
 }
 
 
