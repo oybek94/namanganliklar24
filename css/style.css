@@ -11,26 +11,26 @@
 
 html {
    box-sizing: border-box;
- }
- 
- *,
- *::after,
- *::before {
+}
+
+*,
+*::after,
+*::before {
    box-sizing: inherit;
- }
- 
- body {
+}
+
+body {
    margin: 0;
    padding: 0;
    font-family: 'Rubik', sans-serif;
    font-weight: 400;
    font-size: 16px;
- }
+}
 
- img {
-   width: 100%;
+img {
+   max-width: 100%;
    height: auto;
- }
+}
 
 .container {
    max-width: 1200px;
@@ -40,10 +40,19 @@ html {
 
 /* *************** HEADER TOP INFO ************* */
 .header-top {
+   z-index: 50;
    padding-top: 44px;
    padding-bottom: 23px;
    background-color: var(--gray);
    margin-bottom: 22px;
+}
+
+.header-top::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+
 }
 
 .header-top__info {
@@ -62,15 +71,6 @@ html {
    box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
 }
 
-.top-logo__text {
-   font-style: normal;
-   font-weight: bold;
-   font-size: 28px;
-   line-height: 33px;
-   color: var(--blue);
-   text-transform: uppercase;
-   text-decoration: none;
-}
 
 /* CURRENT */
 .rate__items {
@@ -92,6 +92,7 @@ html {
    padding-right: 5px;
    color: var(--blue);
 }
+
 /* TOP RIGHT */
 
 .top-right {
@@ -99,10 +100,11 @@ html {
    display: flex;
 }
 
-.search, 
+.search,
 .lang {
    margin-right: 22px;
 }
+
 .btn {
    background-color: var(--white);
    border-radius: 5px;
@@ -150,7 +152,7 @@ html {
    margin: auto;
    padding: 11px 11px 11px 37px;
    background: linear-gradient(90deg, #1E96C8 15.07%, #37AEE2 85.96%);
-   color:var(--white);
+   color: var(--white);
    text-decoration: none;
 }
 
@@ -269,7 +271,7 @@ html {
 }
 
 .covid__patients {
-   padding-right: 50px; 
+   padding-right: 50px;
    color: #EB5569;
 }
 
@@ -316,6 +318,7 @@ html {
 .main-news__link {
    text-decoration: none;
 }
+
 .image-link {
    border-radius: 5px;
 }
@@ -380,9 +383,9 @@ html {
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: 0.9fr 1.1fr;
    grid-template-areas:
-    'lastNews lastNews famousNews'
-    'lastNews lastNews middleAd';
-    gap: 20px;
+      'lastNews lastNews famousNews'
+      'lastNews lastNews middleAd';
+   gap: 20px;
 }
 
 .last-news {
@@ -514,7 +517,7 @@ img.last-news__image {
 }
 
 .famous-news__line {
-   border:none;
+   border: none;
    border-bottom: 4px solid #E4E4E4;
    margin-top: 14px;
    margin-bottom: 18px;
@@ -580,7 +583,8 @@ img.last-news__image {
 
 .footer-header {
    display: flex;
-   justify-content: space-between;;
+   justify-content: space-between;
+   ;
 }
 
 
@@ -672,9 +676,9 @@ img.last-news__image {
    text-decoration: none;
 }
 
-.top-nav__links:hover, 
-.main-news__title:hover, 
-.report__title:hover, 
+.top-nav__links:hover,
+.main-news__title:hover,
+.report__title:hover,
 .famous-news__title:hover {
    color: var(--blue);
 }
@@ -694,15 +698,168 @@ img.last-news__image {
       font-size: 14px;
    }
 
-   
+
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+
+   .header-top::before {
+      z-index: 3;
+   }
+
+   .header__burger {
+      display: block;
+      position: absolute;
+      right: 32px;
+      width: 20px;
+      height: 16px;
+      z-index: 3;
+   }
+
+   .header__burger::before,
+   .header__burger::after {
+      content: '';
+      position: absolute;
+      background-color: var(--blue);
+      width: 100%;
+      height: 4px;
+      right: 0;
+      transition: all .3s ease;
+   }
+
+   .header__burger::before {
+      top: 0;
+   }
+
+   .header__burger::after {
+      bottom: 0;
+   }
+
+   .header__burger-line {
+      position: absolute;
+      background-color: var(--blue);
+      width: 100%;
+      height: 4px;
+      top: 6px;
+      transition: all .3s ease;
+   }
+
+   .header__burger.active::before {
+      transform: rotate(45deg);
+      top: 6px;
+   }
+
+   .header__burger.active::after {
+      transform: rotate(-45deg);
+      bottom: 6px;
+   }
+
+   .header__burger.active .header__burger-line {
+      transform: scale(0);
+   }
+
+   .top-nav {
+      position: fixed;
+      padding: 250px 32px 32px 50px;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: #333A44;
+      transition: all .3s ease;
+   }
+
+   .top-nav.active {
+      left: 0;
+   }
+
+   .top-nav.active body {
+      overflow: hidden;
+   }
+
+   .top-nav__items {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .top-nav__list {
+      flex-direction: column;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+
+   .top-nav__list:not(:last-child) {
+      margin-bottom: 14px;
+   }
+
+   .top-nav__links {
+      font-size: 30px;
+      line-height: 40px;
+      color: var(--white);
+   }
+
+   .top-logo {
+      position: relative;
+      z-index: 3;
+      margin: 0 auto;
+   }
+
+   .rate {
+      position: absolute;
+      z-index: 3;
+      top: 130px;
+      left: -200%;
+      line-height: 1.5;
+   }
+
+   .rate.active {
+      left: 45px;
+   }
+
+   .rate__list {
+      font-size: 30px;
+      color: var(--white);
+   }
+
+   .rate__icon {
+      font-size: 30px;
+   }
+
+   .top-right {
+      position: relative;
+      z-index: 3;
+      top: 000px;
+      left: -500%;
+   }
+
+   .top-right.active {
+      left: 0;
+   }
+
+   .top-right {
+      display: none;
+   }
 
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 
+   .top-logo {
+      top: 50px;
+   }
+
+   .rate__list,
+   .rate__icon {
+      font-size: 18px;
+   }
+}
+
+
+/* Iphone 5 */
+@media (max-width: 380px) {
+   .rate__items {
+      flex-direction: column;
+   }
 }
