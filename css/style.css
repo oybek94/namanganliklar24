@@ -678,3 +678,31 @@ img.last-news__image {
 .famous-news__title:hover {
    color: var(--blue);
 }
+
+
+/* ADAPTIVE */
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+
+   /* HEADER TOP */
+   .join {
+      display: none;
+   }
+
+   .rate__list {
+      font-size: 14px;
+   }
+
+   
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
